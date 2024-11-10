@@ -12,28 +12,10 @@ final class QuoteViewModel: ObservableObject {
     @Published var quote: [Quote] = []
     @Published var alert: AlertItem?
     
-
-    func getDailyQuote() {
+    func getQuote(type: NetworkManager.QuoteType) {
         Task {
             do {
-                quote = try await NetworkManager.shared.getDailyQuote()
-            } catch {
-                if let error = error as? NetworkError {
-                    switch error {
-                    case .invalidURL:
-                        alert = AlertContext.invalidURL
-                    case .invalidData:
-                        alert = AlertContext.invalidData
-                    }
-                }
-            }
-        }
-    }
-    
-    func getRandomQuote() {
-        Task {
-            do {
-                quote = try await NetworkManager.shared.getRandomQuote()
+                quote = try await NetworkManager.shared.getQuote(type: type)
             } catch {
                 if let error = error as? NetworkError {
                     switch error {

@@ -40,7 +40,7 @@ struct QuoteView: View {
             }
             
         }
-
+        
     }
 }
 

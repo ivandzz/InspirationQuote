@@ -24,7 +24,7 @@ struct RandomQuoteView: View {
             Spacer()
             
             Button(action: {
-                viewModel.getRandomQuote()
+                viewModel.getQuote(type: .random)
             }, label: {
                 Text("Update")
                     .font(.title2)
@@ -37,7 +37,7 @@ struct RandomQuoteView: View {
             })
         }
         .task {
-            viewModel.getRandomQuote()
+            viewModel.getQuote(type: .random)
         }
         .alert(item: $viewModel.alert) { alert in
             Alert(title: alert.title, message: alert.message, dismissButton: alert.dismissButton)

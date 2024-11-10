@@ -25,7 +25,7 @@ struct DailyQuoteView: View {
         }
         .padding(.bottom, 70)
         .task {
-            viewModel.getDailyQuote()
+            viewModel.getQuote(type: .daily)
         }
         .alert(item: $viewModel.alert) { alert in
             Alert(title: alert.title, message: alert.message, dismissButton: alert.dismissButton)

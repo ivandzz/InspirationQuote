@@ -67,9 +67,9 @@
 		050F68572C08B34F00A42AB4 /* InspirationQuote */ = {
 			isa = PBXGroup;
 			children = (
-				050F68782C08CAFA00A42AB4 /* Views */,
-				050F68772C08CAEC00A42AB4 /* Models */,
 				050F68742C08CA8A00A42AB4 /* Utilities */,
+				050F68772C08CAEC00A42AB4 /* Models */,
+				050F68782C08CAFA00A42AB4 /* Views */,
 				050F68582C08B34F00A42AB4 /* InspirationQuoteApp.swift */,
 				050F685C2C08B35000A42AB4 /* Assets.xcassets */,
 				050F685E2C08B35000A42AB4 /* Preview Content */,

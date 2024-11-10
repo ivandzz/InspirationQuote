@@ -10,10 +10,9 @@ import Foundation
 struct Quote: Decodable, Hashable {
     let q: String 
     let a: String
-    let h: String
 }
 
 final class MockData {
     
-    let sample = [Quote(q: "I have no special talent. I am only passionately curious.", a: "Albert Einstein", h: "")]
+    let sample = [Quote(q: "I have no special talent. I am only passionately curious.", a: "Albert Einstein")]
 }
